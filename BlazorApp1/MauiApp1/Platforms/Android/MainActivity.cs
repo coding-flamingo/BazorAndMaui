@@ -1,6 +1,6 @@
 ﻿using Android.App;
 using Android.Content.PM;
-using Microsoft.Maui;
+using Android.OS;
 
 namespace MauiApp1
 {

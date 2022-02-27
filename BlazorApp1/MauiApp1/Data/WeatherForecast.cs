@@ -1,5 +1,3 @@
-using System;
-
 namespace MauiApp1.Data
 {
     public class WeatherForecast
