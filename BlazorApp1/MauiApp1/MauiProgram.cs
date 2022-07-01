@@ -21,7 +21,7 @@ namespace MauiApp1
 #if WINDOWS
                     lifecycle
             .AddWindows(windows =>
-                windows.OnNativeMessage((app, args) => {
+                windows.OnPlatformMessage((app, args) => {
                     if (MauiApp1.Platforms.Windows.WindowExtensions.Hwnd == IntPtr.Zero)
                     {
                         MauiApp1.Platforms.Windows.WindowExtensions.Hwnd = args.Hwnd;
