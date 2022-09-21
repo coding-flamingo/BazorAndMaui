@@ -16,6 +16,7 @@ namespace MauiApp1
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                 });
             builder.Services.AddMauiBlazorWebView();
+            builder.Services.AddLocalization();
             builder.ConfigureLifecycleEvents(lifecycle =>
             {
 #if WINDOWS
