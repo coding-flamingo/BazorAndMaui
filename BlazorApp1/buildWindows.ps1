@@ -3,5 +3,4 @@ New-SelfSignedCertificate -Type Custom -Subject $certificateSubjectName  -KeyUsa
 
 $cert = (Get-ChildItem cert:\CurrentUser\My   | where-object { $_.Subject -like "$certificateSubjectName" }  | Select-Object -First 1).Thumbprint
 
-dotnet publish -f net6.0-windows10.0.19041 -c Release /p:PackageCertificateThumbprint=$cert /p:GenerateAppxPackageOnBuild=true
-/p:AppxPackageSigningEnabled=true
+dotnet publish -f net6.0-windows10.0.19041 -c Release /p:PackageCertificateThumbprint=$cert /p:GenerateAppxPackageOnBuild=true /p:AppxPackageSigningEnabled=true
