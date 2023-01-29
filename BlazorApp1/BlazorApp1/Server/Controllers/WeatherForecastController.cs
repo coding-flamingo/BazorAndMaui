@@ -22,8 +22,21 @@ namespace BlazorApp1.Server.Controllers
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            return GetWeatherForecasts(5);
+        }
+
+
+        /// <summary>
+        /// Returns Random weather data
+        /// </summary>
+        /// <param name="count">Number of days you want to generate </param>
+        /// <returns> Array of <see cref="WeatherForecast"/></returns>
+        /// <exception cref="HttpRequestException">Error contacting server</exception>
+        private IEnumerable<WeatherForecast> GetWeatherForecasts(int count)
+        {
+            return Enumerable.Range(1, count).Select(index => new WeatherForecast
             {
+
                 Date = DateTime.Now.AddDays(index),
                 TemperatureC = Random.Shared.Next(-20, 55),
                 Summary = Summaries[Random.Shared.Next(Summaries.Length)]

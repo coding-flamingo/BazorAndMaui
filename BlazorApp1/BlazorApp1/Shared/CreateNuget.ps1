@@ -1,0 +1,3 @@
+dotnet build -c release
+dotnet nuget sign C:\Users\igalf\Documents\Git\CodingFlamingo\BazorAndMaui\BlazorApp1\BlazorApp1\Shared\bin\release\BlazorApp1.Shared.1.0.0.nupkg --certificate-fingerprint 218242FD71C48FD101B26A1B14F70216086ABAD3 --timestamper http://timestamp.digicert.com
+dotnet nuget verify --all C:\Users\igalf\Documents\Git\CodingFlamingo\BazorAndMaui\BlazorApp1\BlazorApp1\Shared\bin\release\BlazorApp1.Shared.1.0.0.nupkg
